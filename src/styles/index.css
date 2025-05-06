@@ -3,7 +3,7 @@ body {
 }
 
 .row {
-    height: 200%;
+    height: 100%;
     padding: 1%;
 }
 
@@ -11,16 +11,39 @@ body {
     font-size: 50px;
     border: 1px solid white;
     border-radius: 5px;
+    display: flex;
 }
 
 .col {
     height: 100px;
-    width: 100px;
     border-radius: 5px;
     margin: 5px;
     background-color: rgba(128, 128, 128, 0.39);
-    border: 1px solid whitesmoke;
+    border: 1px solid rgba(245, 245, 245, 0.342);
     display: flex;
     justify-content: center;
     align-items: center;
+    color : white;
+}
+
+button {
+    background-color: rgba(128, 128, 128, 0.39);
+    border: 1px solid rgba(245, 245, 245, 0.342);
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+select {
+    background-color: rgba(128, 128, 128, 0.39);
+    border: 1px solid rgba(245, 245, 245, 0.342);
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 2px;
 }

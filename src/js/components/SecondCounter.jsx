@@ -1,22 +1,28 @@
+import React from 'react';
 
+const SecondCounter = ({ time }) => {
+   const digits = [
+      Math.floor(time / 100000) % 10,
+      Math.floor(time / 10000) % 10,
+      Math.floor(time / 1000) % 10,
+      Math.floor(time / 100) % 10,
+      Math.floor(time / 10) % 10, 
+      Math.floor(time / 1) % 10,
+]; 
 
-
-function SecondCounter({seconds}) {
-    return (
-        <div className="container mt-5">
-            <div className="row bg-dark text-white">
-                <div className="col"><i class="fas fa-clock"></i></div>
-                <div className="col">{Math.floor (seconds / 100000) % 10}</div>
-                <div className="col">{Math.floor (seconds / 10000) % 10}</div>
-                <div className="col">{Math.floor (seconds / 1000) % 10}</div>
-                <div className="col">{Math.floor (seconds / 100) % 10}</div>
-                <div className="col">{Math.floor (seconds / 10) % 10}</div>
-                <div className="col">{Math.floor (seconds / 1) % 10}</div>
+return ( 
+    <div className="time-container">
+        <div className="digits-wrapper row ">
+            <div className='clock-icon col'>
+                <i className="fa-regular fa-clock"></i>
             </div>
+            {digits.map((digit, index) => (
+                <div key={index} className="digit col">
+                    {digit}
+                </div>
+            ))}
         </div>
-    )
-
-
-}
+    </div>
+)}
 
 export default SecondCounter;
